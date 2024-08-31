@@ -7,13 +7,10 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'github.com',
-        port: '',
-      },
-    ],
+    domains: ['github.com'],
+  },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
   },
 }
 

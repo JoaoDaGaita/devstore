@@ -14,12 +14,12 @@ jobs:
         cache-dependency-path: subdir/package-lock.json
     - run: npm ci
     - run: npm test
-
-  - name: Cypress run
-    uses: cypress-io/github-action@v6
-    env: 
-      APP_URL: "http://localhost:3000"
-      NEXT_PUBLIC_API_BASE_URL: "https://devstore-api-blue.vercel.app"
-    with:
-      build: npm run build
-      start: npm start
+    
+    - name: Cypress run
+      uses: cypress-io/github-action@v6
+      env: 
+        APP_URL: "http://localhost:3000"
+        NEXT_PUBLIC_API_BASE_URL: "https://devstore-api-blue.vercel.app"
+      with:
+        build: npm run build
+        start: npm start
